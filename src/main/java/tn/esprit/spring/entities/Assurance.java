@@ -1,10 +1,13 @@
 package tn.esprit.spring.entities;
 
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -14,7 +17,8 @@ public class Assurance {
 	 private long assuranceid;
 	 private String name;
 	 private String localisation ;
-
+	 @ManyToMany(cascade = CascadeType.ALL)
+	 private Set<User> user;
 		
 	 public long getAssuranceid() {
 		return assuranceid;
@@ -44,7 +48,6 @@ public class Assurance {
 		this.localisation = localisation;
 	}
 	
-	@ManyToOne
-	private User user;
+	
 	
 }
