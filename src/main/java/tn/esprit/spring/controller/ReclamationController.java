@@ -32,7 +32,7 @@ import tn.esprit.spring.services.ReclamationServiceImpl;
 
 @Controller
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 @RequestMapping(path = "/reclamation")
 public class ReclamationController {
     @Autowired

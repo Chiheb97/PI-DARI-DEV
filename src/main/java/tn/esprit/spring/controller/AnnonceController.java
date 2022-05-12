@@ -143,13 +143,6 @@ public class AnnonceController {
 		return annonceService.retrieveAnnonce(id);
 	}
 	
-	@GetMapping("/sugg")
-	public List<Annonce> suggsetion(int nbrchambre, int age, String localisation, Etat etat, TypeBien typedebien, Transaction transaction);
-	{
-		return annonceService.suggsetione(int nbrchambre, int age, String localisation, Etat etat, TypeBien typedebien, Transaction transaction);
-
-	}
-	
 	
 	 // importer la liste des annonces en vente dans un fichier PDF
  //	@RequestMapping(value = "/pdfreport", method = RequestMethod.GET, produces = MediaType.APPLICATION_PDF_VALUE)
